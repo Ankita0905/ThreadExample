@@ -7,7 +7,12 @@ public class HandleMainThread
         FirstThread t1=new FirstThread("Ankita");
         FirstThread t2=new FirstThread("Jain");
 
-        t1.start();
-        t2.start();
+        System.out.println("------------Start------------");
+          t1.start();
+          t2.start();
+
+         SecondThread s1=new SecondThread("a");
+         Thread t3=new Thread(s1);
+         t3.start();
     }
 }
